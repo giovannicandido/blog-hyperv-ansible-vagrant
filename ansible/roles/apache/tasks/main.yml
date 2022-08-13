@@ -1,0 +1,6 @@
+- name: install apache web server
+  apt: name=apache2 state=present
+- name: add hello world page index.html
+  template:
+    src: ../templates/index.html.j2
+    dest: /var/www/html/index.html
